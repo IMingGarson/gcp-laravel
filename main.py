@@ -8,7 +8,7 @@ def hello_world():
     return 'Flask Dockerized'
 
 @app.route('/test')
-def hello_world():
+def hello_test():
     return 'Flask Dockerized from test'
 
 if __name__ == "__main__":
