@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/boreal-conquest-337614/flask-image', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['run', '-p', '8881:8888', 'gcr.io/boreal-conquest-337614/flask-image', '-itd']
+  args: ['run', '-p', '8881:8888', 'gcr.io/boreal-conquest-337614/flask-image', '-i', '-t', '-d']
 images:
 - 'gcr.io/boreal-conquest-337614/flask-image'
