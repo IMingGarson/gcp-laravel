@@ -15,5 +15,9 @@ def hello_test():
 def show():
     return 'API get all'
 
+@app.route('/api/v1/all')
+def show():
+    return 'API get all route v2'
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=8888)
