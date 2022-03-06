@@ -16,7 +16,7 @@ def show():
     return 'API get all'
 
 @app.route('/api/v1/all')
-def show():
+def show_v2():
     return 'API get all route v2'
 
 if __name__ == "__main__":
