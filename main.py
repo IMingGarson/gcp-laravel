@@ -11,10 +11,6 @@ def hello_world():
 def hello_test():
     return 'Flask Dockerized from test'
 
-@app.route('api/v1/all')
-def show():
-    return 'API get all'
-
 @app.route('/api/v1/all')
 def show_v2():
     return 'API get all route v2'
