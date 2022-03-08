@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/boreal-conquest-337614/flask-image', '.']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'stock-request', '--image', 'gcr.io/boreal-conquest-337614/flask-image', '--region', 'asia-east1', '--port', '8888']
+  args: ['run', 'deploy', 'stock-request', '--image', 'gcr.io/boreal-conquest-337614/flask-image', '--region', 'asia-east1', '--port', '8080']
 images:
 - 'gcr.io/boreal-conquest-337614/flask-image'
 timeout: 540s
