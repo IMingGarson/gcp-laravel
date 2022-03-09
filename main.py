@@ -1,7 +1,7 @@
 from flask import Flask
 from api.BaseMiddleware import BaseMiddleware
-app = Flask(__name__)
 
+app = Flask(__name__)
 app.wsgi_app = BaseMiddleware(app.wsgi_app)
 
 @app.route('/')

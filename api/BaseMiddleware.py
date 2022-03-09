@@ -5,5 +5,4 @@ class BaseMiddleware(object):
         self.app = app
     
     def __call__(self, environ, start_response):
-        pprint(environ)
         return self.app(environ, start_response)
