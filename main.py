@@ -17,4 +17,4 @@ def show_v2():
     return 'API get all route v2'
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=19999)
+    app.run(debug=True, host='0.0.0.0', port=8080)

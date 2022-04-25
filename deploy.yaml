@@ -1,0 +1,30 @@
+apiVersion: flask-v1
+kind: Deployment
+metadata:
+  name: stock-request-interface
+  labels:
+    name: stock-request-interface
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: stock-request-interface
+    template:
+      metadata:
+        name: stock-request-interface
+      labels:
+        name: stock-request-interface
+      spec:
+        containers:
+          - name: stock-request-interface
+            image: gcr.io/broker-request-interface-gke/flask-image:v1.0
+            port:
+              - containerPort: 8080
+            resources:
+              requests:
+                memory: 256Mi
+              limits:
+                memory: 512Mi
+            env:
+              - name: DEBUG_MODE
+                value: "1"
